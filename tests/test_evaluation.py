@@ -22,7 +22,7 @@ def test_all_model_versions():
     X = df[['sepal_length','sepal_width','petal_length','petal_width']]
     y = df['species']
     accs = {}
-    for version in ["v1", "v2", "v3"]:
+    for version in ["v1", "v2", "v3","5%","10%","50%"]:
         pkl_path = f"models/decision_tree_model_{version}.pkl"
         acc, cm = evaluate_model(pkl_path, X, y)
         accs[version] = acc
